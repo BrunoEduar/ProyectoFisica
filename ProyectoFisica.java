@@ -77,7 +77,20 @@ private JLabel etiquetaPregunta1, etiquetaPregunta2, etiquetaResultado;
     public void actionPerformed(ActionEvent event) {
     Object origen= event.getSource(); //permite trabajar con mas de un botón
     String cadenaPeso, cadenadistacia;  // variable tipo texto
-    int Peso, distancia;
+    int peso, distancia;
         
-    }
+    peso = campoPregunta1.getText();
+    distancia = campoPregunta2.getText();
+    
+   
+         if(origen == botonLimpiar){
+        campoPregunta1.setText("");
+        campoPregunta2.setText("");
+
+         }else if(origen == botonAceptar && !"".equals(peso) && !"".equals(distancia){
+        campoPregunta1.setEditable(false);
+        campoPregunta2.setEditable(false);
+        botonLimpiar.setVisible(false);
+        }
+   }
 }
