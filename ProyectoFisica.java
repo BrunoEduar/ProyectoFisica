@@ -1,8 +1,8 @@
 /***
 *Programa: ProyectoFisica.java
 *Autor:    Portillo Casillas Bruno Eduardo
-*Fecha:    15/11/2020
-*Descripcion: segura la vida y asegura la felicidad.
+*Fecha:    23/02/23
+*Descripcion: segura la vida y asegura la felicidad, para ello tenemos que aprobar o preparar el final.
 *
 ***/
 
@@ -65,7 +65,6 @@ private JLabel etiquetaPregunta1, etiquetaPregunta2, etiquetaResultado;
         botonRepetir = new JButton("Repetir");
         ventana.add(botonRepetir);
         botonRepetir.setVisible(false);
-        botonRepetir.setEditable(false);
         botonRepetir.setBounds(410, 350, 430, 370);
         botonRepetir.addActionListener(this);
        
@@ -76,12 +75,14 @@ private JLabel etiquetaPregunta1, etiquetaPregunta2, etiquetaResultado;
        }
     public void actionPerformed(ActionEvent event) {
     Object origen= event.getSource(); //permite trabajar con mas de un botón
-    String cadenaPeso, cadenadistacia;  // variable tipo texto
+    String cadenaPeso, cadenaDistacia;  // variable tipo texto
     int peso, distancia;
         
     peso = campoPregunta1.getText();
-    distancia = campoPregunta2.getText();
-    
+    cadenaDistacia = campoPregunta2.getText();
+     cadenaPeso = campoPregunta1.getText(); //recibe el valor de la caja de texto en la variable
+        peso = Integer.parseInt(cadenaPeso);
+        distacia = Integer.parsetInt(cadenaDistacia);
    
          if(origen == botonLimpiar){
         campoPregunta1.setText("");
@@ -91,6 +92,8 @@ private JLabel etiquetaPregunta1, etiquetaPregunta2, etiquetaResultado;
         campoPregunta1.setEditable(false);
         campoPregunta2.setEditable(false);
         botonLimpiar.setVisible(false);
+        
+             
         }
    }
 }
