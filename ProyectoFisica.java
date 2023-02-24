@@ -61,12 +61,6 @@ private JLabel etiquetaPregunta1, etiquetaPregunta2, etiquetaResultado;
         botonLimpiar.setBounds(510, 350, 530, 370);
         ventana.add(botonLimpiar);
         botonLimpiar.addActionListener(this);
-        
-        botonRepetir = new JButton("Repetir");
-        ventana.add(botonRepetir);
-        botonRepetir.setVisible(false);
-        botonRepetir.setBounds(410, 350, 430, 370);
-        botonRepetir.addActionListener(this);
        
         botonAceptar = new JButton("Aceptar");
         ventana.add(botonAceptar);
@@ -75,25 +69,30 @@ private JLabel etiquetaPregunta1, etiquetaPregunta2, etiquetaResultado;
        }
     public void actionPerformed(ActionEvent event) {
     Object origen= event.getSource(); //permite trabajar con mas de un botón
-    String cadenaPeso, cadenaDistacia;  // variable tipo texto
-    int peso, distancia;
+    String cadenaPeso, cadenaDistacia, cadenaResultado;  // variable tipo texto
+    double peso, distancia, fuerza, resultado, gravedad = 9.81;
         
     peso = campoPregunta1.getText();
     cadenaDistacia = campoPregunta2.getText();
      cadenaPeso = campoPregunta1.getText(); //recibe el valor de la caja de texto en la variable
-        peso = Integer.parseInt(cadenaPeso);
-        distacia = Integer.parsetInt(cadenaDistacia);
+        peso = Integer.parseDouble(cadenaPeso);
+        distacia = Integer.parsetDouble(cadenaDistacia);
    
          if(origen == botonLimpiar){
         campoPregunta1.setText("");
         campoPregunta2.setText("");
 
          }else if(origen == botonAceptar && !"".equals(peso) && !"".equals(distancia){
-        campoPregunta1.setEditable(false);
-        campoPregunta2.setEditable(false);
-        botonLimpiar.setVisible(false);
-        
+            campoPregunta1.setEditable(false);
+            campoPregunta2.setEditable(false);
+            botonLimpiar.setVisible(false);
+            
+             fuerza = peso * gravedad;
              
+         }
+                  
+        }else {
+       System.exit(0);// Sale del Sistema
         }
-   }
+    }
 }
