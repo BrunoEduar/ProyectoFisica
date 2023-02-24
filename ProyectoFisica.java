@@ -16,9 +16,9 @@ public class Practica4Asegurador extends JFrame implements ActionListener {
 *
 */
 private static final long serialVersionUID = 1L;
-private JLabel etiquetaPregunta1, etiquetaPregunta2, etiquetaPregunta3;
-    private JTextField campoTextoResultado,campoPregunta1, campoPregunta2, campoPregunta3;
-    private JButton botonCerrar, botonLimpiar, botonAceptar;
+private JLabel etiquetaPregunta1, etiquetaPregunta2, etiquetaResultado;
+    private JTextField campoTextoResultado,campoPregunta1, campoPregunta2;
+    private JButton botonCerrar, botonLimpiar, botonAceptar, botonRepetir;
    
 
     public static void main(String[] args) {
@@ -45,11 +45,33 @@ private JLabel etiquetaPregunta1, etiquetaPregunta2, etiquetaPregunta3;
         
          etiquetaPregunta2 = new JLabel("Ingrese la altura que desea en 'METROS'");
         etiquetaPregunta2.setBounds(360, 210, 380, 235);
-        ventana.add(etiquetaPregunta1);
+        ventana.add(etiquetaPregunta2);
        
         campoPregunta2 = new JTextField(10);
         campoPregunta2.setVisible(true);
         campoPregunta2.setBounds(360, 240, 380, 265);
-        ventana.add(campoPregunta1);
+        ventana.add(campoPregunta2);
+        
+         botonCerrar = new JButton("Cerrar");
+        botonCerrar.setBounds(510, 350, 530, 370);
+        ventana.add(botonCerrar);
+        botonCerrar.addActionListener(this);
+        
+          botonLimpiar = new JButton("Limpiar");
+        botonLimpiar.setBounds(510, 350, 530, 370);
+        ventana.add(botonLimpiar);
+        botonLimpiar.addActionListener(this);
+        
+        botonRepetir = new JButton("Repetir");
+        ventana.add(botonRepetir);
+        botonRepetir.setVisible(false);
+        botonRepetir.set ();
+        botonRepetir.setBounds(410, 350, 430, 370);
+        botonRepetir.addActionListener(this);
+       
+        botonAceptar = new JButton("Aceptar");
+        ventana.add(botonAceptar);
+        botonAceptar.setBounds(410, 350, 430, 370);
+        botonAceptar.addActionListener(this);
        }
 }
