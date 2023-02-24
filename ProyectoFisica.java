@@ -17,7 +17,7 @@ public class ProyectoFisica extends JFrame implements ActionListener {
 */
 private static final long serialVersionUID = 1L;
 private JLabel etiquetaPregunta1, etiquetaPregunta2, etiquetaResultado;
-    private JTextField campoTextoResultado,campoPregunta1, campoPregunta2;
+    private JTextField campoResultado, campoPregunta1, campoPregunta2;
     private JButton botonCerrar, botonLimpiar, botonAceptar;
    
 
@@ -83,18 +83,17 @@ private JLabel etiquetaPregunta1, etiquetaPregunta2, etiquetaResultado;
     String cadenaPeso, cadenaDistacia, cadenaResultado;  // variable tipo texto
     double peso, distancia, fuerza, resultado, gravedad = 9.81;
         
-    peso = campoPregunta1.getText();
     cadenaDistacia = campoPregunta2.getText();
      cadenaPeso = campoPregunta1.getText(); //recibe el valor de la caja de texto en la variable
         peso = Integer.parseDouble(cadenaPeso);
-        distacia = Integer.parsetDouble(cadenaDistacia);
+        distancia = Integer.parsetDouble(cadenaDistacia);
    
          if(origen == botonLimpiar){
             campoPregunta1.setText("");
             campoPregunta2.setText("");
             campoResultado.setText("");
 
-         }else if(origen == botonAceptar && !"".equals(peso) && !"".equals(distancia){
+         }else if(origen == botonAceptar && !"".equals(peso) && !"".equals(distancia)){
             campoPregunta1.setEditable(false);
             campoPregunta2.setEditable(false);
             botonLimpiar.setVisible(false);
@@ -102,15 +101,15 @@ private JLabel etiquetaPregunta1, etiquetaPregunta2, etiquetaResultado;
             
              fuerza = peso * gravedad;
              JOptionPane.showMessageDialog(null, "Su fuerza es de:" + fuerza + "N");
-             resultado = fuerza * distacia;
-             JOptionPane.showMessageDialog(null, "El trabajo necesario para ello es de:" + trabajo + "J");
+             resultado = fuerza * distancia;
+             JOptionPane.showMessageDialog(null, "El trabajo necesario para ello es de:" + resultado + "J");
              cadenaResultado = String.valueOf(resultado);
              campoResultado.setText(cadenaResultado + "J");
              etiquetaResultado.setVisible(true);
              campoResultado.setEditable(false);
+             
          }
-                  
-        }else {
+              else {
             System.exit(0);// Sale del Sistema
         }
     }
