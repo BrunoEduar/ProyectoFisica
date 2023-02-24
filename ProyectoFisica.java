@@ -65,7 +65,7 @@ private JLabel etiquetaPregunta1, etiquetaPregunta2, etiquetaResultado;
         botonRepetir = new JButton("Repetir");
         ventana.add(botonRepetir);
         botonRepetir.setVisible(false);
-        botonRepetir.set ();
+        botonRepetir.setEditable(false);
         botonRepetir.setBounds(410, 350, 430, 370);
         botonRepetir.addActionListener(this);
        
@@ -74,4 +74,10 @@ private JLabel etiquetaPregunta1, etiquetaPregunta2, etiquetaResultado;
         botonAceptar.setBounds(410, 350, 430, 370);
         botonAceptar.addActionListener(this);
        }
+    public void actionPerformed(ActionEvent event) {
+    Object origen= event.getSource(); //permite trabajar con mas de un botón
+    String cadenaPeso, cadenadistacia;  // variable tipo texto
+    int Peso, distancia;
+        
+    }
 }
