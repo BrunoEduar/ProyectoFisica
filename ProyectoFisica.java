@@ -33,5 +33,23 @@ private JLabel etiquetaPregunta1, etiquetaPregunta2, etiquetaPregunta3;
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         Container ventana = getContentPane();
         ventana.setLayout(new FlowLayout());
+        
+        etiquetaPregunta1 = new JLabel("Ingrese el peso del objeto en 'Kg'");
+        etiquetaPregunta1.setBounds(360, 210, 380, 235);
+        ventana.add(etiquetaPregunta1);
+       
+        campoPregunta1 = new JTextField(10);
+        campoPregunta1.setVisible(true);
+        campoPregunta1.setBounds(360, 210, 380, 225);
+        ventana.add(campoPregunta1);
+        
+         etiquetaPregunta2 = new JLabel("Ingrese la altura que desea en 'METROS'");
+        etiquetaPregunta2.setBounds(360, 210, 380, 235);
+        ventana.add(etiquetaPregunta1);
+       
+        campoPregunta2 = new JTextField(10);
+        campoPregunta2.setVisible(true);
+        campoPregunta2.setBounds(360, 240, 380, 265);
+        ventana.add(campoPregunta1);
        }
 }
