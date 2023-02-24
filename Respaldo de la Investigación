@@ -1,0 +1,37 @@
+Investigación
+
+Magnetismo (Joel).-
+     El desarrollo de nuestra sociedad se debe principalmente al estudio de la electricidad y el magnetismo lo cual ha llevado a un gran desarrollo tecnológico.
+     El magnetismo es un fenómeno físico que presentan ciertos materiales (imanes), los cuales ejercen fuerzas de atracción o repulsión a distancia sobre otros materiales que pueden tener o no propiedades magnéticas.
+     El magnetismo se relaciona estrechamente con la electricidad. Así como una carga eléctrica está rodeada por un campo eléctrico, si se mueve se rodeará también de un campo magnético. Este campo magnético se debe a las “distorsiones” del campo eléctrico causadas por el movimiento y fueron explicadas por Albert Einstein en 1905, en su teoría especial de la relatividad, por lo que podemos decir que un campo magnético es un subproducto relativista del campo eléctrico. En resumen, el movimiento de las cargas eléctricas produce el magnetismo en los materiales: en un conductor, el magnetismo se observa fácilmente al tener una corriente eléctrica en el material y cuando no existe corriente eléctrica. El magnetismo es debido al movimiento de los electrones en el átomo.
+
+    Electricidad (Ángel)
+
+    Electromagnetismo (Deivid)
+    -Concepto:
+    Resulta como la unificación de los fenómenos eléctricos y magnéticos a partir de la predicción teórica de las ondas electromagnéticas por el físico escocés James Clerk Maxwell.
+
+
+    -Ecuaciones de Maxwell
+
+    Ley de Gauss para electricidad:
+    EdA = q0
+
+    Ley de Gauss para magnetismo:
+    BdA = 0
+    Ley de Faraday para la inducción:
+    E ds = -dBdt
+    Ley de Ampere:
+    B ds= 0i+1c2tEdA
+    Podemos levantar un objeto
+
+    Electroimán (Alonso)
+    Aprovechando los principios del electromagnetismo que anteriormente se han explicado, se pueden construir los llamados electroimanes. Estos son dispositivos que, aprovechando el flujo de electricidad, adquieren propiedades magnéticas.
+      El más sencillo se construye utilizando solamente una pila, alambre de cobre y un tornillo. Por su propia cuenta, al conectar los dos polos de la pila, se genera un campo magnético. Sin embargo, este es muy débil. Para darle la fuerza que hace falta, el cable de cobre se enrollará alrededor de un tornillo de hierro. Al tener más metal, más electrones entran en movimiento y se produce un campo con mayor fuerza.
+      Ahora bien, partiendo de este electroimán sencillo, se conectan las piezas a un chip arduino, el cual se programa para poder especificar la cantidad de corriente que se aplica al electroimán y así alterar la fuerza que produce. De este modo, se podrá hacer levitar objetos de diferentes masas a diferentes alturas. 
+    Cabe mencionar que, con el fin de que el electroimán funcione verdaderamente para transporte de materiales, el electroimán debe de programarse para que el objeto ascienda, no que simplemente levite. Para ello debe hacerse que el flujo de electricidad aumente progresivamente, y así también la consecuente fuerza con la que actúa el electroimán. Para lograr dicho fin, se programa una estructura cíclica en el arduino.
+    Finalmente, para evitar que el imán levitante se ladee, es preciso colocar el electroimán dentro de un tubo y pegar el imán levitante a una plataforma con igual diámetro que el interior del tubo. Al encontrarse la plataforma en un área tan delimitada, esta no puede moverse de forma horizontal o diagonal al tubo, sino solo en el mismo sentido y dirección en que este se encuentra. 
+    Corrientes magnéticas (Bruno)
+
+Referencias
+https://blogs.ugto.mx/rea/clase-digital-1-magnetismo/
