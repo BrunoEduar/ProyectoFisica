@@ -52,6 +52,17 @@ private JLabel etiquetaPregunta1, etiquetaPregunta2, etiquetaResultado;
         campoPregunta2.setBounds(360, 240, 380, 265);
         ventana.add(campoPregunta2);
         
+        
+        etiquetaResultado = new JLabel("El trabajo necesario para esto es de:");
+        etiquetaResultado.setBounds(360, 210, 380, 235);
+        etiquetaResultado.setVisible(false);
+        ventana.add(etiquetaResultado);
+        
+        campoResultado = new JTextField(10);
+        campoResultado.setVisible(false);
+        campoResultado.setBounds(360, 240, 380, 265);
+        ventana.add(campoResultado);
+        
          botonCerrar = new JButton("Cerrar");
         botonCerrar.setBounds(510, 350, 530, 370);
         ventana.add(botonCerrar);
@@ -79,23 +90,28 @@ private JLabel etiquetaPregunta1, etiquetaPregunta2, etiquetaResultado;
         distacia = Integer.parsetDouble(cadenaDistacia);
    
          if(origen == botonLimpiar){
-        campoPregunta1.setText("");
-        campoPregunta2.setText("");
+            campoPregunta1.setText("");
+            campoPregunta2.setText("");
+            campoResultado.setText("");
 
          }else if(origen == botonAceptar && !"".equals(peso) && !"".equals(distancia){
             campoPregunta1.setEditable(false);
             campoPregunta2.setEditable(false);
             botonLimpiar.setVisible(false);
+             botonAceptar.setVisible(false);
             
              fuerza = peso * gravedad;
              JOptionPane.showMessageDialog(null, "Su fuerza es de:" + fuerza + "N");
              resultado = fuerza * distacia;
              JOptionPane.showMessageDialog(null, "El trabajo necesario para ello es de:" + trabajo + "J");
-         
+             cadenaResultado = String.valueOf(resultado);
+             campoResultado.setText(cadenaResultado + "J");
+             etiquetaResultado.setVisible(true);
+             campoResultado.setEditable(false);
          }
                   
         }else {
-       System.exit(0);// Sale del Sistema
+            System.exit(0);// Sale del Sistema
         }
     }
 }
