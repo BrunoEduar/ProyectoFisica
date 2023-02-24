@@ -88,7 +88,10 @@ private JLabel etiquetaPregunta1, etiquetaPregunta2, etiquetaResultado;
             botonLimpiar.setVisible(false);
             
              fuerza = peso * gravedad;
-             
+             JOptionPane.showMessageDialog(null, "Su fuerza es de:" + fuerza + "N");
+             resultado = fuerza * distacia;
+             JOptionPane.showMessageDialog(null, "El trabajo necesario para ello es de:" + trabajo + "J");
+         
          }
                   
         }else {
